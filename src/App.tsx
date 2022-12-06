@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import User from './components/User';
 
 function App() {
   return (
     <div className="App">
-     <h1>React Typescript</h1>
+     <h1>User Management</h1>
+     <User name="Ibrahim Hossain" age={23} isRegistered={true} />
+     
     </div>
   );
 }
