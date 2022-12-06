@@ -1,13 +1,25 @@
 import React from 'react';
 
-type UserProps = {name: string; age: number; isRegistered:boolean}
+type UserProps = {
+     user: {
+        name: string;
+        age: number;
+        isRegistered: boolean;
+        lang: string[];
+    }
+}
 
-const User = ({name,age, isRegistered}: UserProps) => {
+const User = ({user}: UserProps) => {
     return (
         <div>
-            <h4>{name}</h4>
-            <p>{age}</p>
-           {isRegistered? <p>Registered User</p>:<p>Not Registered User</p>}
+            <h4>{user.name}</h4>
+            <p>{user.age}</p>
+           {user.isRegistered? <p>Registered User</p>:<p>Not Registered User</p>}
+           <p>
+            {user.lang.map((language, index)=>{
+                return <span key={index}>{language} </span>
+            })}
+           </p>
         </div>
     );
 };
