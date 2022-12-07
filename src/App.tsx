@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
+import DataFetch from './components/DataFetch';
 // import User from './components/User';
-import UserDemo from './components/UserDemo';
+// import UserDemo from './components/UserDemo';
 
 // const user1 = {
 //   name:"Ibrahim Hossain" ,
@@ -11,7 +12,7 @@ import UserDemo from './components/UserDemo';
 // }
 
 //Array of objects
-const users =[
+/* const users =[
   {
     id:1,
     name:"Ibrahim Hossainb",
@@ -30,14 +31,15 @@ const users =[
     email:"rima@gmail.com",
     age:22
   }
-]
+] */
 
 function App() {
   return (
     <div className="App">
      <h1>User Management</h1>
+     <DataFetch status="success"/>
      {/* <User user={user1} /> */}
-     <UserDemo users={users} />
+     {/* <UserDemo users={users} /> */}
      
     </div>
   );
